@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}Whetting Your Appetite}{1}%
+\contentsline {subsection}{\numberline {1.1}Where From Here}{1}%
+\contentsline {section}{\numberline {2}Using the Python Interpreter}{1}%
+\contentsline {subsection}{\numberline {2.1}Interactive Input Editing and History Substitution}{3}%
+\contentsline {section}{\numberline {3}An Informal Introduction to Python}{4}%
+\contentsline {subsection}{\numberline {3.1}Using Python as a Calculator}{4}%
+\contentsline {subsection}{\numberline {3.2}Tuples and Sequences}{7}%
+\contentsline {subsection}{\numberline {3.3}First Steps Towards Programming}{7}%
+\contentsline {subsection}{\numberline {3.4}More Control Flow Tools}{9}%
+\contentsline {subsubsection}{\numberline {3.4.1}If Statements}{9}%
+\contentsline {subsubsection}{\numberline {3.4.2}For Statements}{9}%
+\contentsline {subsubsection}{\numberline {3.4.3}The {\tt range()} Function}{10}%
+\contentsline {subsubsection}{\numberline {3.4.4}Break Statements and Else Clauses on Loops}{10}%
+\contentsline {subsubsection}{\numberline {3.4.5}Pass Statements}{11}%
+\contentsline {subsubsection}{\numberline {3.4.6}Conditions Revisited}{11}%
+\contentsline {subsection}{\numberline {3.5}Defining Functions}{11}%
+\contentsline {subsection}{\numberline {3.6}Modules}{13}%
+\contentsline {subsubsection}{\numberline {3.6.1}More on Modules}{14}%
+\contentsline {subsubsection}{\numberline {3.6.2}Standard Modules}{15}%
+\contentsline {subsection}{\numberline {3.7}Errors and Exceptions}{16}%
+\contentsline {subsubsection}{\numberline {3.7.1}Syntax Errors}{16}%
+\contentsline {subsubsection}{\numberline {3.7.2}Exceptions}{16}%
+\contentsline {subsubsection}{\numberline {3.7.3}Handling Exceptions}{17}%
+\contentsline {subsubsection}{\numberline {3.7.4}Raising Exceptions}{19}%
+\contentsline {subsubsection}{\numberline {3.7.5}User-defined Exceptions}{19}%
+\contentsline {subsubsection}{\numberline {3.7.6}Defining Clean-up Actions}{19}%
+\contentsline {subsection}{\numberline {3.8}Classes}{20}%
+\contentsline {subsubsection}{\numberline {3.8.1}Prologue}{20}%
+\contentsline {subsubsection}{\numberline {3.8.2}A Simple Example}{20}%
+\contentsline {section}{\numberline {4}XXX P.M.}{21}%

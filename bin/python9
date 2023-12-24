@@ -1,0 +1,3 @@
+#!/bin/bash
+LOC=`dirname $0`/..
+PYTHONPATH=$LOC/lib/ rlwrap $LOC/src/python9 "$@"

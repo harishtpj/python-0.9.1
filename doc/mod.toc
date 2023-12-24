@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {1}Introduction}{1}%
+\contentsline {section}{\numberline {2}Built-in Types, Exceptions and Functions}{1}%
+\contentsline {subsection}{\numberline {2.1}Built-in Types}{1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Numeric Types}{1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Sequence Types}{2}%
+\contentsline {paragraph}{Mutable Sequence Types.}{2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Mapping Types}{2}%
+\contentsline {subsubsection}{\numberline {2.1.4}Other Built-in Types}{3}%
+\contentsline {paragraph}{Modules.}{3}%
+\contentsline {paragraph}{Classes and Class Objects.}{3}%
+\contentsline {paragraph}{Functions.}{3}%
+\contentsline {paragraph}{Methods.}{3}%
+\contentsline {paragraph}{Type Objects.}{4}%
+\contentsline {paragraph}{The Null Object.}{4}%
+\contentsline {paragraph}{File Objects.}{4}%
+\contentsline {subsection}{\numberline {2.2}Built-in Exceptions}{4}%
+\contentsline {subsection}{\numberline {2.3}Built-in Functions}{5}%
+\contentsline {section}{\numberline {3}Built-in Modules}{7}%
+\contentsline {subsection}{\numberline {3.1}Built-in Module {\tt sys}}{7}%
+\contentsline {subsection}{\numberline {3.2}Built-in Module {\tt math}}{8}%
+\contentsline {subsection}{\numberline {3.3}Built-in Module {\tt time}}{8}%
+\contentsline {subsection}{\numberline {3.4}Built-in Module {\tt regexp}}{8}%
+\contentsline {subsection}{\numberline {3.5}Built-in Module {\tt posix}}{9}%
+\contentsline {subsection}{\numberline {3.6}Built-in Module {\tt stdwin}}{10}%
+\contentsline {subsubsection}{\numberline {3.6.1}Functions Defined in Module {\tt stdwin}}{10}%
+\contentsline {subsubsection}{\numberline {3.6.2}Window Object Methods}{12}%
+\contentsline {subsubsection}{\numberline {3.6.3}Drawing Object Methods}{13}%
+\contentsline {subsubsection}{\numberline {3.6.4}Menu Object Methods}{13}%
+\contentsline {subsubsection}{\numberline {3.6.5}Text-edit Object Methods}{13}%
+\contentsline {subsubsection}{\numberline {3.6.6}Example}{14}%
+\contentsline {subsection}{\numberline {3.7}Built-in Module {\tt amoeba}}{14}%
+\contentsline {subsubsection}{\numberline {3.7.1}Capability Operations}{15}%
+\contentsline {subsection}{\numberline {3.8}Built-in Module {\tt audio}}{16}%
+\contentsline {subsection}{\numberline {3.9}Built-in Module {\tt gl}}{17}%
+\contentsline {subsection}{\numberline {3.10}Built-in Module {\tt pnl}}{18}%
+\contentsline {section}{\numberline {4}Standard Modules}{19}%
+\contentsline {subsection}{\numberline {4.1}Standard Module {\tt string}}{19}%
+\contentsline {subsection}{\numberline {4.2}Standard Module {\tt path}}{20}%
+\contentsline {subsection}{\numberline {4.3}Standard Module {\tt getopt}}{20}%
+\contentsline {subsection}{\numberline {4.4}Standard Module {\tt rand}}{21}%
+\contentsline {subsection}{\numberline {4.5}Standard Module {\tt whrandom}}{21}%
+\contentsline {subsection}{\numberline {4.6}Standard Module {\tt stdwinevents}}{21}%
+\contentsline {subsection}{\numberline {4.7}Standard Module {\tt rect}}{22}%
+\contentsline {subsection}{\numberline {4.8}Standard Modules {\tt GL} and {\tt DEVICE}}{22}%
+\contentsline {subsection}{\numberline {4.9}Standard Module {\tt panel}}{23}%
+\contentsline {subsection}{\numberline {4.10}Standard Module {\tt panelparser}}{23}%
+\contentsline {section}{\numberline {5}P.M.}{23}%

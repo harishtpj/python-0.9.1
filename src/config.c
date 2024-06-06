@@ -26,6 +26,9 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 #include <stdio.h>
 
+/* Added by M.V.Harish Kumar on 06-06-2024, to support Windows environment */
+#define ON_WINDOWS
+
 #ifdef USE_STDWIN
 #include <stdwin.h>
 
@@ -125,7 +128,9 @@ getpythonpath()
 extern void inittime();
 extern void initmath();
 extern void initregexp();
-extern void initposix();
+#ifndef ON_WINDOWS
+extern void initposix(); /* Added by M.V.Harish Kumar on 06-06-2024, for Windows env */
+#endif
 #ifdef USE_AUDIO
 extern void initaudio();
 #endif
@@ -152,10 +157,13 @@ struct {
        {"time",      inittime},
        {"math",      initmath},
        {"regexp",    initregexp},
-       {"posix",     initposix},
-
 
        /* Optional modules */
+
+/* Added by M.V.Harish Kumar on 06-06-2024, for Windows env */
+#ifndef ON_WINDOWS
+       {"posix",     initposix},
+#endif
 
 #ifdef USE_AUDIO
        {"audio",     initaudio},

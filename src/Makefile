@@ -66,7 +66,7 @@ RANLIB =       ranlib  # For BSD
 # Python module library.  The default contains "../lib" so running
 # the interpreter from the source/build directory as distributed will
 # find the library (admittedly a hack).
-DEFPYTHONPATH=        ./lib:/mnt/d/harish/Programming/Python/Python09/python-0.9.1/lib:../lib
+DEFPYTHONPATH=        ./lib:../lib
 
 
 # For "Pure" BSD Systems
@@ -309,6 +309,31 @@ DEFPYTHONPATH=        ./lib:/mnt/d/harish/Programming/Python/Python09/python-0.9
 #AUDIO_SRC=    audiomodule.c asa.c
 #AUDIO_OBJ=    audiomodule.o asa.o
 
+# Added by M.V.Harish Kumar on 06-06-2024
+# Enabling posix module
+# ====================
+#
+# Uncommenting the following line will enable the 'posix' module.
+#
+#POSIX_OBJ=    posixmodule.o
+#POSIX_SRC=    posixmodule.c
+
+# We can compile this project on windows too
+# But it involves to set env variable OS = Win
+# and have ar binary with a working c compiler
+# This was successfully compiled with tcc and mingw64 compiler toolchain
+ifeq ($(OS),Win)
+  # Define Windows specific variables
+  DEL = del /F  # Force delete for Windows
+  MV = ren
+  OUT = python.exe
+else
+  # Define Unix/Linux specific variables
+  RM = rm -f  # Remove file for Unix/Linux
+  MV = mv
+  LIBM = -lm
+  OUT = python
+endif
 
 # Major Definitions
 # =================
@@ -321,7 +346,7 @@ STANDARD_OBJ=  acceler.o bltinmodule.o ceval.o classobject.o \
                intobject.o intrcheck.o listnode.o listobject.o \
                mathmodule.o methodobject.o modsupport.o \
                moduleobject.o node.o object.o parser.o \
-               parsetok.o posixmodule.o regexp.o regexpmodule.o \
+               parsetok.o $(POSIX_OBJ) regexp.o regexpmodule.o \
                strdup.o $(STRERROR_OBJ) \
                stringobject.o $(STRTOL_OBJ) structmember.o \
                sysmodule.o timemodule.o tokenizer.o traceback.o \
@@ -335,7 +360,7 @@ STANDARD_SRC=  acceler.c bltinmodule.c ceval.c classobject.c \
                intobject.c intrcheck.c listnode.c listobject.c \
                mathmodule.c methodobject.c modsupport.c \
                moduleobject.c node.c object.c parser.c \
-               parsetok.c posixmodule.c regexp.c regexpmodule.c \
+               parsetok.c $(POSIX_SRC) regexp.c regexpmodule.c \
                strdup.c $(STRERROR_SRC) \
                stringobject.c $(STRTOL_SRC) structmember.c \
                sysmodule.c timemodule.c tokenizer.c traceback.c \
@@ -351,7 +376,7 @@ LIBDEPS=       libpython.a $(STDW_LIBDEPS) $(AM_LIBDEPS) \
 
 # NB: the ordering of items in LIBS is significant!
 LIBS=          libpython.a $(STDW_LIBS) $(AM_LIBS) \
-               $(PANEL_LIBS) $(GL_LIBS) $(RL_LIBS) -lm
+               $(PANEL_LIBS) $(GL_LIBS) $(RL_LIBS) $(LIBM)
 
 LIBOBJECTS=    $(STANDARD_OBJ) $(STDW_OBJ) $(AM_OBJ) $(AUDIO_OBJ) \
                $(GL_OBJ) $(PANEL_OBJ)
@@ -380,13 +405,13 @@ GENSOURCES=    acceler.c fgetsintr.c grammar1.c \
 # ============
 
 python:                libpython.a $(OBJECTS) $(LIBDEPS) Makefile
-	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o python
+	$(CC) $(CFLAGS) $(OBJECTS) $(LIBS) -o $(OUT)
 
 libpython.a:   $(LIBOBJECTS)
-	-rm -f @lib
+	-$(DEL) @lib
 	ar cr @lib $(LIBOBJECTS)
 	$(RANLIB) @lib
-	mv @lib libpython.a
+	$(MV) @lib libpython.a
 
 python_gen:    $(GENOBJECTS) $(RL_LIBDEPS)
 	$(CC) $(CFLAGS) $(GENOBJECTS) $(RL_LIBS) -o python_gen
@@ -430,7 +455,7 @@ tags:          $(SOURCES) $(GENSOURCES) $(HEADERS)
 	$(CTAGS) $(SOURCES) $(GENSOURCES) $(HEADERS)
 
 clean::
-	-rm -f *.o core [,#@]*
+	-$(DEL) *.o core [,#@]*
 
 clobber::      clean
 	-rm -f python9 python_gen libpython.a tags
